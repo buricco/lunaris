@@ -1,0 +1,7 @@
+# Upstream requires a publically available user name 
+# and password to access the files, and uscan does
+# not seem to support this method.
+# Also development upstream seems to have stopped.
+# The get-orig-source target in the debian/rules file
+# seeks to fulfil the role of uscan here.
+ksh source: debian-watch-file-is-missing

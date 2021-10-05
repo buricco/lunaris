@@ -1,0 +1,13 @@
+This replaces the OpenBSD version of byacc which was formerly included in the
+Lunaris Core collection with one taken from upstream and more recently
+updated.
+
+It is the release of March 30, 2020, from https://invisible-island.net/byacc/
+
+I have not altered the code, just stripped it down and rewritten the makefile.
+
+yyfix.1 and yyfix.sh are left intact from the previous release as they are
+separate from byacc but have been included with it in the BSDs.
+
+SVN
+Sept. 7, 2020

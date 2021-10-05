@@ -1,0 +1,14 @@
+Rules:
+ rules:
+  -
+   Glob: bin/* lib/* src/*
+   Contains: Eclipse Public License, Version 1.0
+   License: Eclipse_Public_License_1.0
+  -
+   Glob: src/lib/libsum/sum-md5.c
+   License: RSA
+   Copyright: 1991-1992, RSA Data Security, Inc.
+   Justification: single awkward file
+ChangeLog:
+ license: BSD-3-clause
+

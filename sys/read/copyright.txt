@@ -1,0 +1,1054 @@
+This project is formed of disparate subprojects, each with its own copyright,
+On occasion, pieces of those subprojects may be extracted from other projects
+with their own copyrights.  This file attempts to contain, in a single place, a 
+full list of copyright and non-copyright acknowledgements which pertain to 
+various components within this project, as well as any acknowledgements which
+are required to be present in promotional material, or in all publications.
+
+It is certainly possible that some acknowledgements may have been overlooked.
+
+You can find some of the original content on GitHub as well at
+  https://github.com/buricco/lc-subset
+
+cksum is a hairy mess, so a separate copyright.txt is found in its folder,
+which points back here for additional information.
+
+Copyright for S. V. Nickolas' original contributions, except where otherwise
+specified:
+
+Copyright 2007, 2013, 2019, 2020, 2021 S. V. Nickolas.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to deal 
+with the Software without restriction, including without limitation the rights 
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+copies of the Software, and to permit persons to whom the Software is 
+furnished to do so, subject to the following conditions:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimers.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimers in the 
+     documentation and/or other materials provided with the distribution.
+  3. Neither the names of the authors nor the names of contributors may be 
+     used to endorse or promote products derived from this Software without 
+     specific prior written permission.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE 
+CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH 
+THE SOFTWARE.
+
+ex is derived from Elvis 1.8p4 copyright 1990-1994 Steve Kirkendall.
+Modifications are released under the same license as above.
+
+--
+
+Berkeley "3-BSD" Licenses:
+
+bsdstring:
+  Copyright (c) 2004, 2005, 2009, 2011 Guillem Jover <guillem@hadrons.org>
+Files in the "debian" folder of ksh:
+  Copyright (c) 2005-2013, Oliver Kiddle, <okiddle@yahoo.co.uk>
+  Copyright (c) 2015, Nicholas Bamber <nicholas@periapt.co.uk>
+sum-sha2 in ksh:
+  Copyright (c) 2000-2001, Aaron D. Gifford
+make
+  Copyright (c) 1988, 1989 Adam de Boor
+  Copyright (c) 1989 Berkeley Softworks
+at, atrun
+  Copyright (c) 1977-1995 by Robert Swartz.  All rights reserved.
+
+gzip
+
+Copyright (c) 1997, 1998, 2003, 2004 Matthew R. Green
+All rights reserved.
+
+inwstr, keymap.h in the curses library
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. The name of the author may not be used to endorse or promote products 
+     derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR 
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+
+bc
+
+Copyright (C) 1991-1994, 1997, 2006, 2008, 2012-2017 
+    Free Software Foundation, Inc.
+Copyright (C) 2016-2017 Philip A. Nelson.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. The names Philip A. Nelson and Free Software Foundation may not be used 
+     to endorse or promote products derived from this software without 
+     specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY PHILIP A. NELSON "AS IS" AND ANY EXPRESS OR 
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL PHILIP A. NELSON OR THE FREE SOFTWARE FOUNDATION BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The utilities following are taken in whole or in part from the Berkeley
+Software Distribution or its descendents and contain code owned by The Regents
+of the University of California, and are hereby acknowledged.
+
+indent Copyright (c) 1976 Board of Trustees of the University of Illinois.
+       Copyright (c) 1985 Sun Microsystems, Inc.
+mesg Copyright (c) 1990 UNIX System Laboratories, Inc.
+     Copyright (c) 1984, 1986, 1987, 1988, 1989, 1990 AT&T.
+     All rights reserved.
+pax, pwcache Copyright (c) 1992 Keith Muller.
+pr (including egetopt) Copyright (c) 1991 Keith Muller.
+sed Copyright (c) 1992 Diomidis Spinellis.
+sh Copyright (c) 1997-2005, 2007
+       Herbert Xu <herbert@gondor.apana.org.au>.  All rights reserved.
+   Copyright (c) 1997 Christos Zoulas.  All rights reserved.
+signames Copyright (c) 2014 Sami Kerola <kerolasa@iki.fi>
+         Copyright (c) 2014 Karel Zak <kzak@redhat.com>
+         Copyright (c) 2017 Niklas Hambüchen <mail@nh2.me>
+
+apply, biff, cal, calendar, chmod, cmp, col, colcrt, colrm, column, comm, 
+compress, csh, ctags, cut, date, dd, expand, factor, find, finger, fmt, fold, 
+from, ftp, head, hexdump, hostname, id, indent, install, join, last, lex, 
+logger, login, look, lorder, ls, m4, mail, make, mesg, mkfifo, more, nohup, 
+paste, pax, ping, pr, printenv, printf, pwd, rev, rm, script, sed, sh, shar, 
+shutdown, su, swapon, tail, tee, telnet, tftp, time, tput, tr, traceroute, ul, 
+unexpand, uuencode, uudecode, who, whois
+
+From The BSD Games Collection: adventure, fish, monop, rain, robots, trek, 
+   worms, wump
+
+The curses library
+Several portions of "libast" in ksh
+radixsort in sort
+setmode in mkdir (taken from chmod)
+strcasestr in file
+bitstring and popen from cron
+strmode.c, vis.c and vis.h in ls and stat
+
+Copyright (c) 1980-1995, 1999 The Regents of the University of California.  
+    All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. Neither the name of the University nor the names of its contributors may 
+     be used to endorse or promote products derived from this software without 
+     specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Additional notice for lex:
+
+The United States Government has rights in this work pursuant to contract no. 
+DE-AC03-76SF00098 between the United States Department of Energy and the 
+University of California.
+
+--
+
+"0-BSD" Licenses:
+
+sulogin:
+
+Copyright (c) 2003,2012 by Solar Designer <solar at owl.openwall.com>
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted.
+
+There is ABSOLUTELY NO WARRANTY, express or implied.
+
+--
+
+"1-BSD" Licenses:
+
+strtonum Copyright (c) 2004 Ted Unangst and Todd Miller.  All rights reserved.
+reallocarray Copyright (c) 2008 Otto Moerbeek <otto@drijf.net>
+strlcat/strlcpy in csh and file* 
+  Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
+which
+  Copyright (c) 1997 Todd C. Miller <millert@openbsd.org>
+cron
+  Copyright 1988, 1990, 1993, 1994 Paul Vixie.  All rights reserved.
+  Copyright (c) 2000, 2002 Todd C. Miller <Todd.Miller@courtesan.com>
+  Copyright (c) 1997, 2000 Internet Software Consortium, Inc.
+  Copyright (c) 2004 Internet System Consortium, Inc.
+
+Permission to use, copy, modify, and distribute this software for any purpose 
+with or without fee is hereby granted, provided that the above copyright 
+notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH 
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY 
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, 
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM 
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR 
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR 
+PERFORMANCE OF THIS SOFTWARE.
+
+* A different strlcpy, found in many of the other ports and marked with the
+  comment "uso", was written by S. V. Nickolas and is in the public domain.
+
+patch
+
+Copyright (c) 1988, Larry Wall
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following condition is met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this condition and the following disclaimer.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--
+
+"2-BSD" Licenses:
+
+ostern (in calendar)
+
+Copyright (c) 1996 Wolfram Schneider <wosch@FreeBSD.org>. Berlin. 
+All rights reserved.
+
+paskha (in calendar)
+
+Copyright (c) 1993-1996 by Andrey A. Chernov, Moscow, Russia.
+All rights reserved.
+
+gnum4 & trace (in m4)
+
+Copyright (c) 1999, 2001 Marc Espie
+
+ed
+
+Copyright (c) 1993 Andrew Moore, Talke Studio.  All rights reserved.
+
+compress
+
+Copyright (c) 2003 Can Erkin Acar
+Copyright (c) 1997-2002 Michael Shalayeff
+Copyright (c) 2020 S. V. Nickolas
+All rights reserved.
+
+grep
+
+Copyright (c) 1999 James Howard and Dag-Erling Coïdan Smørgrav
+All rights reserved.
+
+less
+Copyright (c) 1984-2002 Mark Nudelman
+
+mktemp
+Copyright (c) 1994, 1995, 1996, 1998 Peter Wemm <peter@netplex.com.au>
+
+ncal
+Copyright (c) 1997 Wolfgang Helbig.  All rights reserved.
+
+csplit, pathchk
+Copyright (c) 2002 Tim J. Robbins.  All rights reserved.
+
+timespecsub in dd/misc.c
+Portions of the curses library
+Copyright (c) 2006-2018 Roy Marples <roy@marples.name>
+All rights reserved.
+
+dirdeps.mk, gendirdeps.mk, meta2deps.py, meta2deps.sh, meta in make
+Copyright (c) 2009-2016 Juniper Networks, Inc.
+All rights reserved.
+
+meta in make
+Portions Copyright (c) 2009 John Birrell.
+
+libpanel (part of the curses library)
+Copyright (c) 2015 Valery Ushakov.
+All rights reserved.
+
+Several files in the curses library
+Copyright (c) 1998-2014 Brett Lymn (blymn@netbsd.org>
+All rights reserved.
+
+inchstr, instr (part of the curses library)
+Copyright (c) 2020 S. V. Nickolas
+
+rdate
+
+Copyright (c) 1994 Christos Zoulas.
+All rights reserved.
+
+extern.h from adventure
+
+Copyright (c) 1997 Christos Zoulas.
+All rights reserved.
+
+buffer, cdf, cdf_time, der, elfclass.h, funcs, is_csv, is_json, magic, 
+readcdf, readelf (in file)
+
+Copyright (c) 2003, 2008, 2016, 2017, 2018, 2019 Christos Zoulas.
+All rights reserved.
+
+file
+
+Copyright (c) Ian F. Darwin 1986-1995.
+Software written by Ian F. Darwin and others;
+maintained 1995-present by Christos Zoulas and others.
+
+script
+
+Copyright (c) 2001 Theo de Raadt
+All rights reserved.
+
+timeout
+Copyright (c) 2014 Baptiste Daroussin <bapt@FreeBSD.org>
+Copyright (c) 2014 Vsevolod Stakhov <vsevolod@FreeBSD.org>
+All rights reserved.
+
+truncate:
+Copyright (c) 2000 Sheldon Hearn <sheldonh@FreeBSD.org>
+Copyright (c) 2007 Eric Anderson <anderson@FreeBSD.org>
+Copyright (c) 2007 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+All rights reserved.
+
+fgetln (in grep, join, sed)
+tzfile (in find, last, ls, pax)
+make_malloc, strlist, metachar, trace (in make)
+fmtcheck, getline, getopt_long, mygetopt.h (in file)
+humanize_number (in ls)
+nl, seq, sort, stat
+
+The curses library
+
+Copyright (c) 1998-2016, 2018 The NetBSD Foundation, Inc.  
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--
+
+Minix Licenses (3-BSD):
+
+diff, xargs
+
+Copyright (c) 1987, 1997 Prentice Hall.  All rights reserved.
+
+Redistribution and use of the MINIX operating system in source and binary 
+forms, with or without modification, are permitted provided that the 
+following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. Neither the name of Prentice Hall nor the names of the software authors 
+     or contributors may be used to endorse or promote products derived from 
+     this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS, AUTHORS, AND CONTRIBUTORS 
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL PRENTICE HALL OR ANY AUTHORS OR CONTRIBUTORS 
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+
+--
+
+Other BSD-type licenses:
+
+awk
+
+Copyright (C) Lucent Technologies 1997
+All Rights Reserved
+
+Permission to use, copy, modify, and distribute this software and its 
+documentation for any purpose and without fee is hereby granted, provided that 
+the above copyright notice appear in all copies and that both that the 
+copyright notice and this permission notice and warranty disclaimer appear in 
+supporting documentation, and that the name Lucent Technologies or any of its 
+entities not be used in advertising or publicity pertaining to distribution of 
+the software without specific, written prior permission.
+
+LUCENT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL LUCENT OR 
+ANY OF ITS ENTITIES BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL 
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, 
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING 
+OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+units
+
+Copyright (c) 1993 by Adrian Mariano (adrian@cam.cornell.edu)
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. The name of the author may not be used to endorse or promote products 
+     derived from this software without specific prior written permission.
+
+Disclaimer:  This software is provided by the author "as is".  The author 
+shall not be liable for any damages caused in any way by this software.
+
+cURL
+
+Copyright (c) 1996 - 2020, Daniel Stenberg, <daniel@haxx.se>, and many
+contributors, see the lib/curl/docs/THANKS file.
+
+All rights reserved.
+
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright
+notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization of the copyright holder.
+
+--
+
+zip and unzip
+
+Copyright (c) 1990-2007 Info-ZIP.  All rights reserved.
+
+For the purposes of this copyright and license, "Info-ZIP" is defined as
+the following set of individuals:
+
+  Mark Adler, John Bush, Karl Davis, Harald Denker, Jean-Michel Dubois, 
+  Jean-loup Gailly, Hunter Goatley, Ed Gordon, Ian Gorman, Chris Herborth,
+  Dirk Haase, Greg Hartwig, Robert Heath, Jonathan Hudson, Paul Kienitz,
+  David Kirschbaum, Johnny Lee, Onno van der Linden, Igor Mandrichenko,
+  Steve P. Miller, Sergio Monesi, Keith Owens, George Petrov, Greg Roelofs,
+  Kai Uwe Rommel, Steve Salisbury, Dave Smith, Steven M. Schweda,
+  Christian Spieler, Cosmin Truta, Antoine Verheijen, Paul von Behren,
+  Rich Wales, Mike White.
+
+This software is provided "as is", without warranty of any kind, express or 
+implied.  In no event shall Info-ZIP or its contributors be held liable for 
+any direct, indirect, incidental, special or consequential damages arising out 
+of the use of or inability to use this software.
+
+Permission is granted to anyone to use this software for any purpose, 
+including commercial applications, and to alter it and redistribute it freely, 
+subject to the above disclaimer and the following restrictions:
+
+  1. Redistributions of source code (in whole or in part) must retain the 
+     above copyright notice, definition, disclaimer, and this list of 
+     conditions.
+  2. Redistributions in binary form (compiled executables and libraries) must 
+     reproduce the above copyright notice, definition, disclaimer, and this 
+     list of conditions in documentation and/or other materials provided with 
+     the distribution.  The sole exception to this condition is redistribution 
+     of a standard UnZipSFX binary (including SFXWiz) as part of a 
+     self-extracting archive; that is permitted without inclusion of this 
+     license, as long as the normal SFX banner has not been removed from the 
+     binary or disabled.
+  3. Altered versions - including, but not limited to, ports to new operating 
+     systems, existing ports with new graphical interfaces, versions with 
+     modified or added functionality, and dynamic, shared, or static library 
+     versions not from Info-ZIP - must be plainly marked as such and must not 
+     be misrepresented as being the original source or, if binaries, compiled 
+     from the original source.  Such altered versions also must not be 
+     misrepresented as being Info-ZIP releases - including, but not limited 
+     to, labeling of the altered versions with the names "Info-ZIP" (or any 
+     variation thereof, including, but not limited to, different 
+     capitalizations), "Pocket UnZip", "WiZ" or "MacZip" without the explicit 
+     permission of Info-ZIP.  Such altered versions are further prohibited 
+     from misrepresentative use of the Zip-Bugs or Info-ZIP e-mail addresses 
+     or the Info-ZIP URL(s), such as to imply Info-ZIP will provide support 
+     for the altered versions.
+  4. Info-ZIP retains the right to use the names "Info-ZIP", "Zip", "UnZip", 
+     "UnZipSFX", "WiZ", "Pocket UnZip", "Pocket Zip", and "MacZip" for its own 
+     source and binary releases.
+
+--
+
+bzip2
+
+"bzip2", the associated library "libbzip2", and all documentation, are 
+copyright (C) 1996-2019 Julian R Seward.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer.
+  2. The origin of this software must not be misrepresented; you must not 
+     claim that you wrote the original software.  If you use this software in 
+     a product, an acknowledgment in the product documentation would be 
+     appreciated but is not required.
+  3. Altered source versions must be plainly marked as such, and must not be 
+     misrepresented as being the original software.
+  4. The name of the author may not be used to endorse or promote products 
+     derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO 
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR 
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER 
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+
+--
+
+X11 (MIT) Licenses:
+
+Arachsys Init Copyright (C) 2006-2020 Chris Webb.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+--
+
+ZLIB Licenses:
+
+cp, mknod, du, ps, split, stty, touch, users
+
+Copyright (c) 2003 Gunnar Ritter
+
+libz
+
+(C) 1995-2017 Jean-loup Gailly and Mark Adler
+
+This software is provided 'as-is', without any express or implied warranty. 
+In no event will the authors be held liable for any damages arising from the 
+use of this software.
+
+Permission is granted to anyone to use this software for any purpose, 
+including commercial applications, and to alter it and redistribute it freely, 
+subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not 
+     claim that you wrote the original software. If you use this software in a 
+     product, an acknowledgment in the product documentation would be 
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be 
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+--
+
+backupfile in patch:
+
+Copyright (c) 1990 Free Software Foundation, Inc.
+
+This program is free software; you can redistribute it and/or modify it 
+without restriction.
+
+This program is distributed in the hope that it will be useful, but WITHOUT 
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+FOR A PARTICULAR PURPOSE.
+
+--
+
+sum-md5 in ksh:
+
+Copyright (c) 1991-1992, RSA Data Security, Inc.
+
+License to copy and use this software is granted provided that it is 
+identified as the "RSA Data Security, Inc. MD5 Message-Digest Method" in all 
+material mentioning or referencing this software or this function.
+
+License is also granted to make and use derivative works provided that such 
+works are identified as "derived from the RSA Data Security, Inc. MD5 
+Message-Digest Method" in all material mentioning or referencing the derived 
+work.
+
+RSA Data Security, Inc. makes no representations concerning either the 
+merchantability of this software or the suitability of this software for any 
+particular purpose. It is provided "as is" without express or implied warranty 
+of any kind.
+
+These notices must be retained in any copies of any part of this documentation 
+and/or software.
+
+--
+
+strutils in wall:
+
+Copyright (C) 2010 Karel Zak <kzak@redhat.com>
+Copyright (C) 2010 Davidlohr Bueso <dave@gnu.org>
+
+Do with it what you wish.
+
+--
+
+auto.dep.mk, auto.obj.mk, autoconf.mk, autodep.mk, compiler.mk, cython.mk, 
+dirdeps-options.mk, dirdeps-targets.mk, dpadd.mk, files.mk, host.libnames.mk,
+inc.mk, init.mk, install-mk, install-new.mk, java.mk, ldorder.mk, libnames.mk,
+libs.mk, links.mk, manifest.mk, meta.autodep.mk, meta.stage.mk,
+meta.subdir.mk, meta.sys.mk, mkopt.sh, obj.mk, options.mk, prlist.mk, 
+progs.mk, rst2htm.mk, scripts.mk, srctop.mk, stage-install.sh,
+sys.clean-env.mk, sys.debug.mk, sys.dependfile.mk, sys.mk, sys.vars.mk,
+warnings.mk, whats.mk, yacc.mk (in make)
+
+Copyright (c) 1994, 1996-2019, Simon J. Gerraty
+
+This file is provided in the hope that it will be of use.  There is absolutely 
+NO WARRANTY.  Permission to copy, redistribute or otherwise use this file is 
+hereby granted provided that the above copyright notice and this notice are 
+left intact.
+
+--
+
+LibreSSL:
+
+LibreSSL files are retained under the copyright of the authors. New additions 
+are ISC licensed as per OpenBSD's normal licensing policy, or are placed in 
+the public domain. (See "1-BSD Licenses" above.)
+
+The OpenSSL code is distributed under the terms of the original OpenSSL 
+licenses which follow:
+
+The OpenSSL toolkit stays under a dual license, i.e. both the conditions of 
+the OpenSSL License and the original SSLeay license apply to the toolkit.  See 
+below for the actual license texts.  In case of any license issues related to 
+OpenSSL please contact openssl-core@openssl.org.
+
+OpenSSL License:
+
+Copyright (c) 1998-2011 The OpenSSL Project.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, 
+     this list of conditions and the following disclaimer. 
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. All advertising materials mentioning features or use of this software 
+     must display the following acknowledgment:
+       "This product includes software developed by the OpenSSL Project for 
+        use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+  4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to 
+     endorse or promote products derived from this software without prior 
+     written permission. For written permission, please contact 
+     openssl-core@openssl.org.
+  5. Products derived from this software may not be called "OpenSSL" nor may 
+     "OpenSSL" appear in their names without prior written permission of the 
+     OpenSSL Project.
+  6. Redistributions of any form whatsoever must retain the following 
+     acknowledgment:
+       "This product includes software developed by the OpenSSL Project for 
+        use in the OpenSSL Toolkit (http://www.openssl.org/)"
+
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT "AS IS" AND ANY EXPRESSED OR 
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO 
+EVENT SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY 
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Original SSLeay License:
+
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+
+This package is an SSL implementation written by Eric Young 
+(eay@cryptsoft.com).
+The implementation was written so as to conform with Netscape's SSL.
+
+This library is free for commercial and non-commercial use as long as the 
+following conditions are adhered to.  The following conditions apply to all 
+code found in this distribution, be it the RC4, RSA, lhash, DES, etc., code; 
+not just the SSL code.  
+
+The SSL documentation included with this distribution is covered by the same 
+copyright terms except that the holder is Tim Hudson (tjh@cryptsoft.com).
+
+Copyright remains Eric Young's (or Tim Hudson's), and as such any Copyright 
+notices in the code are not to be removed.
+
+If this package is used in a product, Eric Young should be given attribution 
+as the author of the parts of the library used.  This can be in the form of a 
+textual message at program startup or in documentation (online or textual) 
+provided with the package.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the copyright notice, this 
+     list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+  3. All advertising materials mentioning features or use of this software 
+     must display the following acknowledgement:
+       "This product includes cryptographic software written by Eric Young 
+        (eay@cryptsoft.com)"
+     (The word 'cryptographic' can be left out if the routines from the 
+      library being used are not cryptographic related.)
+  4. If you include any Windows specific code (or a derivative thereof) from 
+     the apps directory (application code) you must include an 
+     acknowledgement:
+       "This product includes software written by Tim Hudson 
+        (tjh@cryptsoft.com)"
+
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG "AS IS" AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO 
+EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The license and distribution terms for any publically available version or 
+derivative of this code cannot be changed; i.e. this code cannot simply be 
+copied and put under another distribution license [including the GNU Public 
+License.]
+
+--
+
+ksh:
+
+Copyright: 1982-2012, AT&T Intellectual Property
+
+THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC 
+LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM 
+CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+
+1. DEFINITIONS
+
+"Contribution" means:
+
+  a) in the case of the initial Contributor, the initial code and 
+     documentation distributed under this Agreement, and
+  b) in the case of each subsequent Contributor:
+    i) changes to the Program, and
+    ii) additions to the Program;
+      where such changes and/or additions to the Program originate from and 
+      are distributed by that particular Contributor. A Contribution 
+      'originates' from a Contributor if it was added to the Program by such 
+      Contributor itself or anyone acting on such Contributor's behalf. 
+      Contributions do not include additions to the Program which: 
+        (i) are separate modules of software distributed in conjunction with 
+            the Program under their own license agreement, and 
+        (ii) are not derivative works of the Program.
+
+"Contributor" means any person or entity that distributes the Program.
+
+"Licensed Patents" mean patent claims licensable by a Contributor which are 
+necessarily infringed by the use or sale of its Contribution alone or when 
+combined with the Program.
+
+"Program" means the Contributions distributed in accordance with this 
+Agreement.
+
+"Recipient" means anyone who receives the Program under this Agreement, 
+including all Contributors.
+
+2. GRANT OF RIGHTS
+
+  a) Subject to the terms of this Agreement, each Contributor hereby grants 
+     Recipient a non-exclusive, worldwide, royalty-free copyright license to 
+     reproduce, prepare derivative works of, publicly display, publicly 
+     perform, distribute and sublicense the Contribution of such Contributor, 
+     if any, and such derivative works, in source code and object code form.
+  b) Subject to the terms of this Agreement, each Contributor hereby grants 
+     Recipient a non-exclusive, worldwide, royalty-free patent license under 
+     Licensed Patents to make, use, sell, offer to sell, import and otherwise 
+     transfer the Contribution of such Contributor, if any, in source code and 
+     object code form. This patent license shall apply to the combination of 
+     the Contribution and the Program if, at the time the Contribution is 
+     added by the Contributor, such addition of the Contribution causes such 
+     combination to be covered by the Licensed Patents. The patent license 
+     shall not apply to any other combinations which include the 
+     Contribution. No hardware per se is licensed hereunder.
+  c) Recipient understands that although each Contributor grants the licenses 
+     to its Contributions set forth herein, no assurances are provided by any 
+     Contributor that the Program does not infringe the patent or other 
+     intellectual property rights of any other entity. Each Contributor 
+     disclaims any liability to Recipient for claims brought by any other 
+     entity based on infringement of intellectual property rights or 
+     otherwise. As a condition to exercising the rights and licenses granted 
+     hereunder, each Recipient hereby assumes sole responsibility to secure 
+     any other intellectual property rights needed, if any. For example, if a 
+     third party patent license is required to allow Recipient to distribute 
+     the Program, it is Recipient's responsibility to acquire that license 
+     before distributing the Program.
+  d) Each Contributor represents that to its knowledge it has sufficient 
+     copyright rights in its Contribution, if any, to grant the copyright 
+     license set forth in this Agreement.
+
+3. REQUIREMENTS
+
+A Contributor may choose to distribute the Program in object code form under 
+its own license agreement, provided that:
+
+  a) it complies with the terms and conditions of this Agreement; and
+  b) its license agreement:
+    i) effectively disclaims on behalf of all Contributors all warranties and 
+       conditions, express and implied, including warranties or conditions of 
+       title and non-infringement, and implied warranties or conditions of 
+       merchantability and fitness for a particular purpose;
+    ii) effectively excludes on behalf of all Contributors all liability for 
+        damages, including direct, indirect, special, incidental and 
+        consequential damages, such as lost profits;
+    iii) states that any provisions which differ from this Agreement are 
+         offered by that Contributor alone and not by any other party; and
+    iv) states that source code for the Program is available from such 
+        Contributor, and informs licensees how to obtain it in a reasonable 
+        manner on or through a medium customarily used for software exchange.
+
+When the Program is made available in source code form:
+
+  a) it must be made available under this Agreement; and
+  b) a copy of this Agreement must be included with each copy of the Program.
+
+Contributors may not remove or alter any copyright notices contained within 
+the Program.
+
+Each Contributor must identify itself as the originator of its Contribution, 
+if any, in a manner that reasonably allows subsequent Recipients to identify 
+the originator of the Contribution.
+
+4. COMMERCIAL DISTRIBUTION
+
+Commercial distributors of software may accept certain responsibilities with 
+respect to end users, business partners and the like. While this license is 
+intended to facilitate the commercial use of the Program, the Contributor who 
+includes the Program in a commercial product offering should do so in a manner 
+which does not create potential liability for other Contributors. Therefore, 
+if a Contributor includes the Program in a commercial product offering, such 
+Contributor ("Commercial Contributor") hereby agrees to defend and indemnify 
+every other Contributor ("Indemnified Contributor") against any losses, 
+damages and costs (collectively "Losses") arising from claims, lawsuits and 
+other legal actions brought by a third party against the Indemnified 
+Contributor to the extent caused by the acts or omissions of such Commercial 
+Contributor in connection with its distribution of the Program in a commercial 
+product offering. The obligations in this section do not apply to any claims 
+or Losses relating to any actual or alleged intellectual property 
+infringement. In order to qualify, an Indemnified Contributor must: 
+  a) promptly notify the Commercial Contributor in writing of such claim, and 
+  b) allow the Commercial Contributor to control, and cooperate with the 
+     Commercial Contributor in, the defense and any related settlement 
+     negotiations. 
+The Indemnified Contributor may participate in any such claim at its own 
+expense.
+
+For example, a Contributor might include the Program in a commercial product 
+offering, Product X. That Contributor is then a Commercial Contributor. If 
+that Commercial  Contributor then makes performance claims, or offers 
+warranties related to Product X, those performance claims and warranties are 
+such Commercial Contributor's responsibility alone. Under this section, the 
+Commercial Contributor would have to defend claims against the other 
+Contributors related to those performance claims and warranties, and if a 
+court requires any other Contributor to pay any damages as a result, the 
+Commercial Contributor must pay those damages.
+
+5. NO WARRANTY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED ON AN 
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR 
+IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, 
+NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. 
+
+Each Recipient is solely responsible for determining the appropriateness of 
+using and distributing the Program and assumes all risks associated with its 
+exercise of rights under this Agreement, including but not limited to the 
+risks and costs of program errors, compliance with applicable laws, damage to 
+or loss of data, programs or equipment, and unavailability or interruption of 
+operations.
+
+6. DISCLAIMER OF LIABILITY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR ANY 
+CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION 
+LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE 
+EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY 
+OF SUCH DAMAGES.
+
+7. GENERAL
+
+If any provision of this Agreement is invalid or unenforceable under 
+applicable law, it shall not affect the validity or enforceability of the 
+remainder of the terms of this Agreement, and without further action by the 
+parties hereto, such provision shall be reformed to the minimum extent 
+necessary to make such provision valid and enforceable.
+
+If Recipient institutes patent litigation against any entity (including a 
+cross-claim or counterclaim in a lawsuit) alleging that the Program itself 
+(excluding combinations of the Program with other software or hardware) 
+infringes such Recipient's patent(s), then such Recipient's rights granted 
+under Section 2(b) shall terminate as of the date such litigation is filed.
+
+All Recipient's rights under this Agreement shall terminate if it fails to 
+comply with any of the material terms or conditions of this Agreement and does 
+not cure such failure in a reasonable period of time after becoming aware of 
+such noncompliance. If all Recipient's rights under this Agreement terminate, 
+Recipient agrees to cease use and distribution of the Program as soon as 
+reasonably practicable. However, Recipient's obligations under this Agreement 
+and any licenses granted by Recipient relating to the Program shall continue 
+and survive.
+
+Everyone is permitted to copy and distribute copies of this Agreement, but in 
+order to avoid inconsistency the Agreement is copyrighted and may only be 
+modified in the following manner. The Agreement Steward reserves the right to 
+publish new versions (including revisions) of this Agreement from time to 
+time. No one other than the Agreement Steward has the right to modify this 
+Agreement. The Eclipse Foundation is the initial Agreement Steward. The 
+Eclipse Foundation may assign the responsibility to serve as the Agreement 
+Steward to a suitable separate entity. Each new version of the Agreement will 
+be given a distinguishing version number. The Program (including 
+Contributions) may always be distributed subject to the version of the 
+Agreement under which it was received. In addition, after a new version of the 
+Agreement is published, Contributor may elect to distribute the Program 
+(including its Contributions) under the new version. Except as expressly 
+stated in Sections 2(a) and 2(b) above, Recipient receives no rights or 
+licenses to the intellectual property of any Contributor under this Agreement, 
+whether expressly, by implication, estoppel or otherwise. 
+
+All rights in the Program not expressly granted under this Agreement are 
+reserved.
+
+This Agreement is governed by the laws of the State of New York and the 
+intellectual property laws of the United States of America. No party to this 
+Agreement will bring a legal action under this Agreement more than one year 
+after the cause of action arose. Each party waives its rights to a jury trial 
+in any resulting litigation.
+
+--
+
+expr is dedicated into the public domain by J.T. Conklin <jtc@netbsd.org>.
+getopt is dedicated into the public domain by Henry Spencer and the rewrites
+  are dedicated into the public domain by S. V. Nickolas.
+test is dedicated into the public domain by Erik Baalbergen.
+true and false are dedicated into the public domain by S. V. Nickolas.
+uniq is dedicated into the public domain by John Woods.
+wc is dedicated into the public domain by David L. Messer.
+yacc is dedicated into the public domain by Robert Corbett.  Revisions have
+  been dedicated into the public domain by their authors, and the current
+  maintainer, Thomas E. Dickey, continues to release new versions into the
+  public domain.
+
+--
+
+Legal acknowledgements (advertising clauses):
+
+This product includes software developed by the OpenSSL Project for use in the 
+OpenSSL Toolkit. (http://www.openssl.org/)
+
+This product includes cryptographic software written by Eric Young 
+(eay@cryptsoft.com)
+
+--
+
+Legal acknowledgements (redistribution clauses):
+
+This product includes software developed by the OpenSSL Project for use in the 
+OpenSSL Toolkit. (http://www.openssl.org/)

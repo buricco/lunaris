@@ -1,0 +1,12 @@
+Index: ksh/src/lib/libast/string/fmtdev.c
+===================================================================
+--- ksh.orig/src/lib/libast/string/fmtdev.c
++++ ksh/src/lib/libast/string/fmtdev.c
+@@ -30,6 +30,7 @@
+ #include <ast.h>
+ #include <ctype.h>
+ #include <ls.h>
++#include <sys/sysmacros.h>
+ 
+ char*
+ fmtdev(struct stat* st)

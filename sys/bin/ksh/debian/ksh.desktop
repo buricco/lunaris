@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Ksh
+Type=Application
+Comment=Korn shell
+Terminal=true
+Exec=ksh93
+Icon=terminal
+Categories=ConsoleOnly;System;Shell;
+GenericName=Korn shell
+Keywords=system;shell;
+OnlyShowIn=Old;

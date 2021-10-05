@@ -1,0 +1,84 @@
+.\"
+.\" File written by Christophe Martin <Schplurtz@free.fr>
+.\" Based on the output of "shcomp --man"
+.\"
+.TH SHCOMP 1 "Fri Jun 3 2005" KSH93 "User Environment Utilities"
+.SH NAME
+shcomp \- compile a ksh93 shell script
+.SH SYNOPSIS
+.B shcomp
+[
+.I options
+] [\fIinfile\fP] [\fIoutfile\fP]]
+.SH ORIGIN OF THIS MAN PAGE
+This man page was written by Christophe Martin <Schplurtz@free.fr>
+for the
+.B Debian
+.B GNU/Linux
+system. It is based on "shcomp \-\-man" output.
+.SH DESCRIPTION
+Unless
+.I \-D
+is specified,
+.B shcomp
+takes a shell script,
+.IR infile ,
+and creates a
+binary format file,
+.IR outfile ,
+that
+.B ksh93
+can read and execute with the same
+effect as the original script.
+.PP
+Since aliases are processed as the script is read, alias definitions whose
+value requires variable expansion will not work correctly.
+.PP
+If
+.I \-D
+is specified, all double quoted strings that are preceded by $ are
+output. These are the messages that need to be translated to locale specific
+versions for internationalization.
+.PP
+If
+.I outfile
+is omitted, then the results will be written to standard output.
+If
+.I infile
+is also omitted, the shell script will be read from standard input.
+.SH OPTIONS
+.TP
+\fI\-D\fP, \fI\-\-dictionary\fP
+Generate a list of strings that need to be placed in a
+message catalog for internationalization.
+.TP
+\fI\-n\fP, \fI\-\-noexec\fP
+Displays warning messages for obsolete or non-conforming
+constructs.
+.TP
+\fI\-v\fP, \fI\-\-verbose\fP
+Displays input from
+.I infile
+onto standard error as it reads it.
+.TP
+\fI\-\-man\fP
+Displays this man page on standard error and exits.
+.TP
+\fI\-\-help\fP
+Shows a short help message and exits.
+.SH EXIT STATUS
+.TP
+0
+Successful completion.
+.TP
+>0
+An error occurred.
+.SH SEE ALSO
+.BR ksh (1)
+.SH IMPLEMENTATION
+.nf
+version         shcomp (AT&T Labs Research) 2012-02-29
+author          David Korn <dgk@research.att.com>
+copyright       Copyright (c) 1982-2012 AT&T Intellectual Property
+license         http://www.eclipse.org/org/documents/epl-v10.html
+.fi

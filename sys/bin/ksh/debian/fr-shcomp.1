@@ -1,0 +1,84 @@
+.\"
+.\" File written by Christophe Martin <Schplurtz@free.fr>
+.\" Based on the output of "shcomp --man"
+.\"
+.TH SHCOMP 1 "Vendredi 3 juin 2005" KSH93 "Manuel de l'utilisateur UNIX"
+.SH NAME
+shcomp \- compile un script shell ksh93
+.SH SYNOPSIS
+.B shcomp
+[
+.I options
+] [\fIfichier-d-entrée\fP] [\fIfichier-de-sortie\fP]]
+.SH ORIGINE DE CETTE PAGE DE MANUEL
+Écrite par Christophe Martin 
+<Schplurtz@free.fr>,
+pour le projet
+.B Debian
+.BR GNU/Linux ,
+elle est basée sur l'affichage de « shcomp \-\-man ».
+.SH DESCRIPTION
+À moins que
+.I \-D
+ne soit spécifié sur la ligne de commande,
+.B shcomp
+lit un script, 
+.IR fichier-d-entrée ,
+et crée un fichier binaire,
+.IR fichier-de-sortie ,
+que
+.B ksh93 
+peut lire et exécuter de la même manière et avec les mêmes effets
+que le script d'origine.
+.PP
+Puisque ils sont evalués lors de la lecture du script, les alias dont la
+valeur nécessite l'expansion de variables ne fonctionneront pas correctement.
+.PP
+Si on utilise l'option
+.BR \-D ,
+toutes les chaines entre guillemets (\fB"\fP) précédées d'un $ sont affichées.
+Ces chaines sont les messages qui doivent être
+traduits pour l'internationnalisation du script.
+.PP
+Si on omet
+.IR fichier-de-sortie ,
+alors le résultat est écrit sur la sortie standard.
+Si on omet également
+.IR fichier-d-entrée ,
+alors le script est lu depuis l'entrée standard.
+.SH OPTIONS
+.TP
+\fI\-D\fP, \fI\-\-dictionary\fP
+Génère une liste de chaines qui doivent être placées dans un catalogue
+de messages pour l'internationnalisation du script.
+.TP
+\fI\-n\fP, \fI\-\-noexec\fP
+Affiche des alertes lorsque le script contient des constructions obsolètes
+ou non conformes.
+.TP
+\fI\-v\fP, \fI\-\-verbose\fP
+Affiche Les lignes de
+.I fichier-d-entrée
+au fur et à mesure qu'elles sont lues.
+.TP
+\fI\-\-man\fP
+Affiche cette page de manuel (en anglais) sur l'erreur standard et quitte.
+.TP
+\fI\-\-help\fP
+Affiche une courte aide (en anglais) et quitte.
+.SH CODE DE RETOUR
+.TP
+0
+Le programme a réussi.
+.TP
+>0
+Une erreur s'est produite.
+.SH VOIR AUSSI
+.BR ksh (1)
+.SH IMPLEMENTATION
+.nf
+version         shcomp (AT&T Labs Research) 2003-03-02
+author          David Korn <dgk@research.att.com>
+copyright       Copyright (c) 1982-2005 AT&T Corp.
+license         http://www.opensource.org/licenses/cpl1.0.txt
+.fi

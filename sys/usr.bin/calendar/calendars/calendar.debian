@@ -1,0 +1,46 @@
+/*
+ * Interesting dates around Debian collected at Infodrom
+ *
+ * http://cvs.infodrom.org/calendar/calendar.infodrom.debian?cvsroot=infodrom
+ * :pserver:anonymous@cvs.infodrom.org:/var/cvs/infodrom co calendar/calendar.infodrom.debian
+ *
+ * $Id: calendar.infodrom.debian,v 1.8 2003/05/06 19:54:40 joey Exp $
+ */
+
+#ifndef _calendar_infodrom_debian_
+#define _calendar_infodrom_debian_
+
+LANG=utf-8
+
+/* Project leaders */
+Dec  1	Ian Jackson became Debian Project Leader, 1997
+Jan  1	Wichert Akkerman became Debian Project Leader, 1999
+Apr  1	Ben Collins became Debian Project Leader, 2001
+Apr 17	Bdale Garbee became Debian Project Leader, 2002
+Apr 17	Martin Michlmayr became Debian Project Leader, 2003
+
+/* Days of death */
+Jul 11	Joel 'Espy' Klecker (Debian) died at the age of 21, 2000
+Mar  1	Christopher Matthew Rutter (Debian) died at the age of 19, 2001
+Mar 28	Fabrizio Polacco (Debian) passed away, 2001
+Jul 21	Martin 'blendi' Butterweck (Debian) died after battling leukemia, 2002
+
+/* Debian releases */
+Oct 26	Debian GNU/Linux 0.93R6 released, 1995
+Dec 11	Infomagic and Debian announce the botching of Debian 1.0, 1995
+Jun 17	Debian GNU/Linux 1.1 alias ``buzz'' released, 1996
+Dec 12	Debian GNU/Linux 1.2 alias ``rex'' released, 1996
+Jun  5	Debian GNU/Linux 1.3 alias ``bo'' released, 1997
+Jul 24	Debian GNU/Linux 2.0 alias ``hamm'' released, 1998
+Mar  9	Debian GNU/Linux 2.1 alias ``slink'' released, 1999
+Aug 15	Debian GNU/Linux 2.2 alias ``potato'' relased, 2000
+Jul 19	Debian GNU/Linux 3.0 alias ``woody'' released, 2002
+
+/* Notably other dates */
+Aug 16	Ian Murdock founded Debian, 1993
+Jun  6	Incorporation of Software in the Public Interest completed, 1997
+Aug 26	Open Hardware Certification Program started, 1997
+Feb 24	SPI applies to register the term OpenSource, 1998
+Jun  2	Non-Profit status of SPI approved, 1999
+
+#endif /* !_calendar_infodrom_debian_ */

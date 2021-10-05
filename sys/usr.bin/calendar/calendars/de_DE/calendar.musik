@@ -1,0 +1,25 @@
+/*
+ * Musik
+ *
+ * $FreeBSD: src/usr.bin/calendar/calendars/de_DE.ISO8859-1/calendar.musik,v 1.8 2002/01/07 13:35:31 tg Exp $
+ */
+
+#ifndef _de_DE_musik_
+#define _de_DE_musik_
+
+LANG=utf-8
+
+/* Klassik */
+02/23	Händel geboren, 1685
+03/21	Johann Sebastian Bach geboren in Eisenach, 1685
+03/26	Beethoven gestorben, 1827
+05/07	Johannes Brahms geboren in Hamburg, 1833
+07/28	Johann Sebastian Bach gestorben in Leipzig, 1750
+10/22	Franz Liszt geboren, 1811
+12/05	Mozart gestorben, 1791
+12/16	Beethoven geboren, 1770
+
+/* Pop */
+09/18	Jimi Hendrix gestorben, 1970
+
+#endif /* !_de_DE_musik_ */

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove|deconfigure)
+        update-alternatives --remove ksh /bin/ksh93
+	# remove compatibility symlink if broken
+	test '!' -h /usr/bin/ksh || test -e /usr/bin/ksh || rm -f /usr/bin/ksh
+
+	update-binfmts --package ksh --remove ksh /bin/ksh93
+    ;;
+
+    upgrade|failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 0
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

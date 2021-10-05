@@ -1,0 +1,105 @@
+#!/bin/bash
+#
+# Copyright (C) 2006-2020 Chris Webb.
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+#  * The above copyright notice and this permission notice shall be included 
+#    in all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+CONFFILE=/etc/ueventd.conf
+PIDFILE=/run/ueventd.pid
+RESTART=0
+SYSFS=${SYSFS:-/sys}
+TRIGGER=0
+
+while getopts :f:p:t OPTION; do
+  case $OPTION in
+    f)
+      CONFFILE=$OPTARG
+      ;;
+    p)
+      PIDFILE=$OPTARG
+      ;;
+    t)
+      TRIGGER=1
+      ;;
+  esac
+done
+
+add() { :; }
+change() { :; }
+event() { :; }
+move() { :; }
+offline() { :; }
+online() { :; }
+remove() { :; }
+
+if [[ ! -f $CONFFILE ]]; then
+  exit 0
+elif ! source "$CONFFILE"; then
+  exit 1
+fi
+
+if [[ ${*:$OPTIND} != "-" ]]; then
+  if { exec 3>>"$PIDFILE" && flock -n 3; } 2>/dev/null; then
+    exec env -i PATH="$PATH" daemon uevent "$0" "${@:1:OPTIND - 1}" -
+    rm -f "$PIDFILE"
+  else
+    echo "Failed to lock $PIDFILE; is ${0##*/} already running?" >&2
+  fi
+  exit 1
+fi
+
+trap 'RESTART=0 && exit' SIGTERM
+trap 'RESTART=1 && exit' SIGHUP SIGINT SIGUSR1 SIGUSR2
+trap '(( RESTART )) && exec "$0" "$@" || rm -f "$PIDFILE"' EXIT
+
+echo $PPID >"$PIDFILE"
+exec 3>&-
+
+if (( TRIGGER )); then
+  find $SYSFS/{module,bus,devices} -name uevent -type f \
+    | while read UEVENT; do echo change >"$UEVENT"; done
+  for (( INDEX = 1; INDEX <= $#; INDEX++ )); do
+    [[ ${!INDEX} == "-t" ]] && set -- "${@:1:INDEX - 1}" "${@:INDEX + 1}"
+  done
+  unset INDEX
+fi
+
+declare -A ENV=()
+while read -r KEY VALUE; do
+  if [[ -n $KEY ]]; then
+    ENV[$KEY]=$VALUE
+    continue
+  fi
+
+  unset ACTION DEVNAME DEVPATH DRIVER INTERFACE KEY SUBSYSTEM SYSPATH VALUE
+  [[ -n ${ENV[ACTION]+defined} ]] && ACTION=${ENV[ACTION]}
+  [[ -n ${ENV[DEVNAME]+defined} ]] && DEVNAME=${ENV[DEVNAME]}
+  [[ -n ${ENV[DEVPATH]+defined} ]] && DEVPATH=${ENV[DEVPATH]}
+  [[ -n ${ENV[DRIVER]+defined} ]] && DRIVER=${ENV[DRIVER]}
+  [[ -n ${ENV[INTERFACE]+defined} ]] && DRIVER=${ENV[INTERFACE]}
+  [[ -n ${ENV[SUBSYSTEM]+defined} ]] && SUBSYSTEM=${ENV[SUBSYSTEM]}
+  [[ -n ${ENV[DEVPATH]+defined} ]] && SYSPATH=$SYSFS${ENV[DEVPATH]}
+
+  case $ACTION in
+    add | change | move | offline | online | remove)
+      event $ACTION $DEVPATH && $ACTION $DEVPATH
+      ;;
+  esac
+  ENV=()
+done

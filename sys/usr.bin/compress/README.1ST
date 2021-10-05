@@ -1,0 +1,7 @@
+Note:
+
+Although I roughly kitbashed bzip2 support into this version of compress, it
+is not exactly well tested.  Some stuff may only partially work, if at all.
+
+S. V. Nickolas
+Aug. 14, 2020

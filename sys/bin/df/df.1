@@ -1,0 +1,74 @@
+.\" Copyright (c) 1989, 1990, 1993
+.\"	The Regents of the University of California.  All rights reserved.
+.\"
+.\" Copyright 2020 S. V. Nickolas.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. Neither the name of the University nor the names of its contributors
+.\"    may be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\"     @(#)df.1	8.3 (Berkeley) 5/8/95
+.\"
+.Dd May 8, 1995
+.Dt DF 1
+.Os BSD 4
+.Sh NAME
+.Nm df
+.Nd display free disk space
+.Sh SYNOPSIS
+.Nm df
+.Op Fl kP
+.Op Ar file | Ar filesystem ...
+.Sh DESCRIPTION
+.Nm Df
+displays statistics about the amount of free disk space on the specified
+.Ar filesystem
+or on the filesystem of which
+.Ar file
+is a part.
+Values are displayed in 512-byte per block block counts.
+If neither a file or a filesystem operand is specified,
+statistics for all mounted filesystems are displayed
+(subject to the
+.Fl t
+option below).
+.Pp
+The following options are available:
+.Bl -tag -width Ds
+.It Fl k
+Displays sizes in kilobytes (1024-byte blocks) instead of the default
+blocksize of 512 bytes.
+.It Fl P
+Displays in the exact format described by the
+.St -p1003.2
+specification.
+.El
+.Sh SEE ALSO
+.Xr getmntinfo 3 ,
+.Xr fstab 5 ,
+.Xr mount 8
+.Sh HISTORY
+A
+.Nm df
+command appeared in
+.At v6 .

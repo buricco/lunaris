@@ -1,0 +1,26 @@
+At the time of writing, there are 134 build folders, mostly for a single
+command, in Lunaris Core.  Although many of the programs are copyrighted by
+the same people and organizations (about a dozen and a half were written by
+myself, and a ton have University of California, Berkeley copyrights), this
+is not true of every program in the system, and thus, many, many copyright
+acknowledgements are required.
+
+It is my general policy to avoid the "advertising clause" in all software
+comprising the Core.  While that may not be fully possible, I have rewritten a
+number of pieces of the system, including runtime libraries, specifically to
+remove this issue entirely from the Core.
+
+A peculiar problem exists with the indent(1) and mail(1) applications, where
+two sets of copyright grants appear, with the specific license terms of the
+Regents of the University of California included in the second even though the
+copyright is changed, including a specific advertising clause to the Board of
+Regents.  In these specific cases, and only in these specific cases, I simply
+took the two texts and combined them into a single text containing all of the
+relevant copyright information and the standard license grant, with the
+attribution excised as the Board of Regents permits.
+
+I understand that this could possibly be interpreted as morally, ethically or 
+even legally questionable but I stand by my decision.
+
+S. V. Nickolas
+Aug. 22, 2020

@@ -1,0 +1,3 @@
+package ksh
+interpreter /bin/ksh93
+magic \x0b\x13\x08

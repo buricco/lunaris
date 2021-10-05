@@ -1,0 +1,81 @@
+#!/usr/bin/make -f
+
+PACKAGE = ksh
+
+# Variables just for get-orig-source
+SRC_VERSION := 93u+20120628
+DL_VERSION = 2012-06-28
+SRC_DIR = $(PACKAGE)-$(SRC_VERSION)
+TARBALL = $(SRC_DIR).tar.gz
+
+ARCH = $(shell bin/package)
+INSTALL = install
+INSTALL_FILE    = $(INSTALL) -p    -o root -g root  -m  644
+INSTALL_PROGRAM = $(INSTALL) -p    -o root -g root  -m  755
+
+DH_VERBOSE=1
+
+# hardening
+CCFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CCFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+export CCFLAGS
+export LDFLAGS
+
+# reproducibility
+LC_ALL=C
+LANG=C
+TZ=/usr/share/zoneinfo/Etc/GMT
+export LC_ALL
+export LANG
+export TZ
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	@echo "CCFLAGS=$(CCFLAGS)"
+	@echo "LDFLAGS=$(LDFLAGS)"
+
+override_dh_auto_build:	
+	bin/package make strip=0
+
+override_dh_auto_install:
+	$(INSTALL_PROGRAM) arch/$(ARCH)/bin/ksh debian/ksh/bin/ksh93
+	$(INSTALL_PROGRAM) arch/$(ARCH)/bin/shcomp debian/ksh/usr/bin/shcomp
+	$(INSTALL_FILE) arch/$(ARCH)/man/man1/sh.1 debian/ksh/usr/share/man/man1/ksh93.1
+	$(INSTALL_FILE) arch/$(ARCH)/fun/* debian/ksh/usr/share/ksh/functions
+	$(INSTALL_FILE) debian/shcomp.1 debian/ksh/usr/share/man/man1/shcomp.1
+	$(INSTALL_FILE) debian/fr-shcomp.1 debian/ksh/usr/share/man/fr/man1/shcomp.1
+	$(INSTALL_FILE) -D debian/binfmt_spec debian/ksh/usr/share/binfmts/ksh
+	$(INSTALL_FILE) -D debian/example.kshrc debian/ksh/etc/skel/.kshrc
+	$(INSTALL_FILE) -D src/cmd/ksh93/PROMO.mm debian/ksh/usr/share/doc/ksh/PROMO
+	$(INSTALL_FILE) -D src/cmd/ksh93/builtins.mm debian/ksh/usr/share/doc/ksh/builtins
+
+override_dh_installchangelogs:
+	dh_installchangelogs src/cmd/ksh93/RELEASE
+
+clean:
+	dh_testdir
+	dh_clean
+	for i in ignore silent package mamprobe ; do \
+		sed -i -e '/^#.\{70\}#/ d'  bin/$$i ; \
+	done
+	rm -rf arch bin/*.old
+
+get-orig-source:
+	@echo 'Old get-orig-source target is no longer usable.'
+	@echo 'Please find latest ksh source code at:'
+	@echo 'https://github.com/att/ast'
+	@exit 1
+	rm -rf $(SRC_DIR) $(TARBALL)
+	mkdir $(SRC_DIR)
+	wget --http-user 'I accept www.opensource.org/licenses/cpl' \
+	  --http-password . -O - \
+	  http://www.research.att.com/~gsf/download/tgz/INIT.$(DL_VERSION).tgz | \
+	  tar xzf - -C $(SRC_DIR)
+	wget --http-user 'I accept www.opensource.org/licenses/cpl' \
+	  --http-password . -O - \
+	  http://www.research.att.com/~gsf/download/tgz/ast-ksh.$(DL_VERSION).tgz | \
+	  tar xzf - -C $(SRC_DIR)
+	tar cf - $(SRC_DIR) | tardy -group 0 -user 0 - - | gzip -c9 > $(TARBALL)

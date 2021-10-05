@@ -1,0 +1,185 @@
+Additions and Changes
+=====================
+
+  Changes prior to 2020/09/01 are based on analysis of the source tree, as I
+  did not keep track of them prior to that date.
+  
+  The first release contained awk, basename, cal, cat, sleep, tee, uname and
+  yacc.  (cal, tee and yacc were taken from BSD; awk is bwk awk; the remainder
+  were specifically written for the project.)  Date codes are significant to
+  the hour (and are in New York time).
+  
+  2020-07-21 21H: added units from OpenBSD.
+  2020-07-21 22H: added ed, nice, nohup from OpenBSD.
+  2020-08-08 03H: officially applied the name "Lunaris Core"; slight reorg of
+                  the code.  Added ls from Heirloom Toolchest; mkdir, rmdir,
+                  sed, who from OpenBSD; uniq, wc, whoami, xargs from Minix.
+                  Wrote true, false, yes.
+  2020-08-08 04H: Wrote dirname (thought I had a copy already, guess not).
+                  head from OpenBSD and tail from Minix.
+  2020-08-08 10H: dd, ln from OpenBSD.
+  2020-08-08 11H: rm from 4.4BSD. expand, paste, sed, tr, unexpand from 
+                  OpenBSD.
+  2020-08-08 13H: Wrote kill, link, killall5 (first into /sbin). cut from 
+                  OpenBSD. seq from NetBSD.
+  2020-08-09 23H: hostname from OpenBSD. Imported Arachsys Linux's init system
+                  (which might be used as the basis for a sysvinit rewrite).
+                  Wrote tty.
+  2020-08-10 01H: Wrote sync. Imported test from OpenBSD.
+  2020-08-10 01H: Imported the C shell, so finally there's a working shell of
+                  some sort.
+  2020-08-10 02H: Imported the Korn shell (ksh93) from Debian. An earlier
+                  version (ksh88) of the Korn shell is essentially the
+                  standard POSIX shell and the basis of GNU's bash.
+  2020-08-10 04H: Wrote echo (couldn't find my old implementation).
+  2020-08-10 05H: cp from Heirloom Toolchest.
+  2020-08-10 05H: date from OpenBSD.
+  2020-08-10 09H: chmod from OpenBSD.
+  2020-08-10 17H: domainname, expr, pwd from OpenBSD.
+  2020-08-10 22H: Wrote dmsg. shutdown from 4.4BSD. wall from util-linux.
+  2020-08-11 01H: users from Heirloom Toolchest. Imported an old PD version of
+                  elvis as vi.
+  2020-08-11 04H: Put strtonum in the common source tree (which later becomes
+                  libunatix). Wrote df.
+  2020-08-11 16H: Added a missing part of cp.
+  2020-08-12 00H: du from Heirloom Toolchest.
+  2020-08-13 05H: Moved basename and dirname from /bin to /usr/bin. Fixed
+                  pound-bang lines in true and false. Corrected titles of link
+                  and unlink. Minor fix to df. Merged pr, uuencode and 
+                  uudecode from a previous attempt.
+  2020-08-13 15H: stty from Heirloom Toolchest.
+  2020-08-13 16H: col, colrm, column from OpenBSD.
+  2020-08-13 20H: Wrote banner and chroot.
+  2020-08-14 01H: Kitbashed compress.
+  2020-08-14 01H: Overhauled df.
+  2020-08-14 04H: cmp from OpenBSD; ftp from netkit.  Initially imported a
+                  version of cron; this is removed 3 days later.
+  2020-08-15 06H: Wrote sum.
+  2020-08-16 04H: env, groups, mknod, renice, split, touch from Heirloom 
+                  Toolchest. colcrt, factor, from, hexdump, id, lex, login, 
+                  mkfifo, ping, ul from 4.4BSD. moved stty from /usr/bin to 
+                  /bin. calendar, lorder from OpenBSD. comm, ctags, fmt, fold, 
+                  grep, gzip, indent, join, less, logname, look, m4, mail, nl, 
+                  patch, pathchk, printenv, printf, sort, su, time, tput, 
+                  tsort from NetBSD. X Window version of install imported. Not 
+                  sure where more entered from, but it's BSD. Not sure about 
+                  ncal either, but it comes from FreeBSD. telnet from netkit.
+                  Much of this may have come from my prior attempt.
+  2020-08-16 05H: Wrote manual for yes.
+  2020-08-17 02H: Fixed typos in copyright attributions. Tweaked some of the
+                  makefiles. Purged the third clause from UCB licenses.
+                  Cleaned up copyright.txt. Updates to sort (to purge it of
+                  4-clause BSD licenses). Removed a stray .o file. Deleted
+                  cron.
+  2020-08-17 03H: bc from NetBSD. Technically it's GNU code which I have been
+                  avoiding but the original author contributed it with a BSD
+                  license, so all cool.
+  2020-08-17 05H: Cleanup to bc.
+  2020-08-20 03H: make from NetBSD.
+  2020-08-20 04H: Cleanup of copyright.txt.
+  2020-08-20 05H: base64, mktemp from NetBSD.
+  2020-08-20 05H: finger from netkit.
+  2020-08-20 08H: Makefile cleanup.
+  2020-08-20 08H: More comprehensive Makefile cleanup.
+  2020-08-20 09H: Updated common files. Adjustments for musl.
+  2020-08-20 10H: Reworked the readme. csplit from NetBSD.
+  2020-08-20 21H: More musl fixes. Removed color from ls.
+  2020-08-20 22H: NetBSD curses added. ul fixed accordingly.
+  2020-08-21 03H: Fixed csplit's makefile. (re)Wrote getopt.
+  2020-08-21 06H: Tweaked my internal makefile generator. ps from Heirloom
+                  Toolchest.
+  2020-08-21 09H: Cleanup of copyright.txt. find from 4.4BSD.
+  2020-08-21 12H: traceroute from 4.4BSD.
+  2020-08-22 07H: Cleanup of copyright.txt, leading to another purge of Third
+                  Clauses. Rewrote part of libcurses to replace 4-clause BSD 
+                  code from Wasabi Systems.  shar and tftp from 4.4BSD.
+  2020-08-22 10H: More purging of Third Clauses. Imported LibreSSL and zlib.
+  2020-08-22 13H: Imported cURL.
+  2020-08-23 11H: Cleanup of copyright.txt. Added a note about tools which
+                  were brought in untouched and could easily be replaced with
+                  newer versions. Added file (took a bit of working to get it
+                  into our build system). Imported InfoZip (zip and unzip).
+  2020-08-23 16H: Imported bzip2.
+  2020-08-28 16H: Added dash (I had been wracking my brain over this for quite
+                  a while as to how to get it kitbashed into our build system; 
+                  in the interim I had been using the V9 shell just to be able 
+                  to chroot into the dogfood environment because ksh won't
+                  build for it).
+  2020-08-29 03H: Added a few manuals. Imported msulogin as sulogin.
+  2020-08-29 11H: cksum, mesg from 4.4BSD. ac from...a BSD? Wrote accton, line
+                  and random.
+  2020-08-29 14H: Pulled in Vixie cron to replace a fork that I had imported
+                  previously and had turned out to be GPL'd. last from 4.4BSD.
+                  whois from NetBSD.
+  2020-08-30 01H: Rejigged sulogin to be more like the System V version. apply
+                  from 4.4BSD. diff from Minix. rdate from NetBSD. Worked on
+                  login a bit.
+  2020-08-31 08H: Removed "common" and "include" folders (separated them into
+                  another project). Wrote news.
+  2020-09-01 09H: Tentatively added my version of mount. Fixed a bug in sync
+                  (had the wrong number of required parameters).  Replaced a
+                  GPL'd code generator in sh with the equivalent data from 
+                  elsewhere in the tree, and changed the name of the output 
+                  binary from dash to sh.  Traced the history of the project
+                  and started a changelog.
+  2020-09-01 22H: at, atrun from Coherent. biff from 4.4BSD.
+  2020-09-02 02H: Added five entries from the BSD Games collection, all 
+                  sourced from NetBSD.
+  2020-09-02 05H: Added monop, robots and trek from the BSD Games Collection, 
+                  also from NetBSD.
+  2020-09-06 17H: Made significant changes to cat (replaced SVR2 -s with BSD
+                  -s and added -etv from BSD/SVR4, with the SVR4 limitation).
+                  Replaced env with a new implementation (somewhere between
+                  that of 4.4BSD and the previous one, and strictly conformant
+                  to POSIX).
+  2020-09-07 22H: Moved env from /bin to /usr/bin. Brought over the unified
+                  version of dd from my OS/2 port (same code, fewer source
+                  files). Replaced logname with a new implementation, but kept
+                  the man page as it was written by the IEEE and my version is
+                  still strictly POSIX-conformant.  Wrote a new version of
+                  hostname and domainname (this is now a single binary).  The
+                  redundant BSD ln has been removed since cp has been able to
+                  function as ln since the beginning.  Reimported yacc from 
+                  upstream (changing it from a BSD version to a public-domain 
+                  version in the process).  Partially implemented pgrep; felt 
+                  the amount currently implemented was adequate even though it 
+                  was incomplete.  Wrote a new version of mkdir and rmdir.
+                  Wrote readlink and realpath.
+  2020-09-08 05H: Corrected a couple botched UCB headers in cron.  (The files
+                  mentioned in copyright.txt)  Added appropriate copyright
+                  headers to all the source files in init.  Removed stray 
+                  third clauses from 3 files in cksum.  Replaced mygetopt.h in
+                  file with an upstream version lacking the third clause.
+                  Updated the copyright header in more's main source file.
+  2020-09-10 16H: Rewrote nice and renice (unifying the two).  Separated some
+                  of the commands into a git repo, and resynched them in.
+                    https://github.com/buricco/lc-subset
+  2020-09-14 10H: Cleaned up a lot of the vi code. (sivle is a fork of the
+                  previous version of elvis.)
+  2020-09-18 11H: swapon from 4.4BSD, swapoff from scratch
+  2020-09-18 16H: Added logger from 4.4BSD; rev, script and which from OpenBSD
+                  (all of which are also in util-linux); util-linux's
+                  text-utils is now fully covered.  Also supplied pivot_root.
+  2020-09-19 00H: Added stat (NetBSD), timeout (NetBSD), truncate (new).
+                  Except for md5sum, shred and tac, pretty much everything
+                  usable in GNU coreutils is now present somehow in Core.
+  2020-09-19 01H: Replaced Minix tail with 4.4BSD tail.  Also means you can
+                  use "tail -r" to do what GNU's "tac" does - I might make it
+                  respond to "tac" later.
+  2020-09-19 03H: Replaced 4.4BSD cksum with NetBSD cksum, which supports a
+                  handful of alternate algorithms.
+  2020-09-19 08H: Cleaned up a few makefiles, fixed a couple broken builds
+                  when isolating out a subset of the Core.  Removed tsort as a
+                  major dependency was missing.
+  2020-09-19 11H: Replaced MIT install with OpenBSD install, because I needed
+                  -D for stuff.
+  2020-09-19 15H: Dug for manpages and kitbashed a couple, read specs, 
+                  replaced Minix uniq with 4.4BSD's.
+  2020-09-20 17H: Replaced truncate with a better version from FreeBSD.
+                  Fixed an issue with install due to missing (present in BSD)
+                  function prototypes.
+  2020-09-21 04H: Removed redundant groups and whoami (id supplies these).
+                  Replaced Heirloom Toolchest ls with NetBSD version.
+  2020-10-16 14H: Added chvt.
+  2021-03-11 22H: Added -v switch to rm, since i use that a lot.
+

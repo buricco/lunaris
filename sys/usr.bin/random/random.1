@@ -1,0 +1,34 @@
+.Dd September 19, 2020
+.Dt RANDOM 1
+.Os
+.Sh NAME
+.Nm random
+.Nd generate a random number
+.Sh SYNOPSIS
+.Nm random
+.Op Fl s
+.Op Ar scale
+.Sh DESCRIPTION
+The
+.Nm random
+utility generates a random number from 0 to
+.Ar scale
+(default 2) minus 1, and, by default, writes it on the standard output.
+The maximum value for
+.Ar scale
+is 255.
+.Pp
+The following options are available:
+.Bl -tag -width flag
+.It Fl s
+Suppresses output of the number.
+.El
+.Pp
+You may optionally specify a
+.Ar scale
+from 1-255, denoting one higher than the desired maximum value.
+The default is 2, which returns a value of 0 or 1.
+.Sh RETURN VALUE
+On exit,
+.Nm random
+returns the number generated.

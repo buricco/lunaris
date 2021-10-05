@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+	# continue below
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+	exit 0
+    ;;
+
+    *)
+	echo "postinst called with unknown argument \`$1'" >&2
+	exit 0
+    ;;
+esac
+
+#DEBHELPER#
+
+# The alternative is the mksh package.
+# For a discussion on interactions between ksh and mksh, see #764401.
+update-alternatives --install /bin/ksh ksh /bin/ksh93 20 \
+                    --slave /usr/share/man/man1/ksh.1.gz ksh.1.gz \
+                            /usr/share/man/man1/ksh93.1.gz
+# create compatibility symlink if necessary
+test -e /usr/bin/ksh || test -h /usr/bin/ksh || \
+    ln -s /bin/ksh /usr/bin/ksh
+
+# For a discussion of what we put in /etc/shells see #790118.
+add-shell /bin/ksh93
+add-shell /bin/rksh93
+
+# This was put in to resolve bug #687343.
+update-binfmts --import ksh
+
+exit 0

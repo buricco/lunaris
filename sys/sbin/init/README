@@ -1,0 +1,214 @@
+Arachsys init
+=============
+
+This is the lightweight BSD-style init and syslog system used in Arachsys
+Linux. It includes a number of small utilities, described below.
+
+
+daemon
+------
+
+FreeBSD has included daemon(8) since 5.0-RELEASE in early 2003. This is a
+Linux-specific reimplementation which supports the same options as the
+FreeBSD version, together with additional features to make it a useful
+building-block for simple dependency-based parallel execution during system
+boot.
+
+Its basic purpose is to detach from the controlling terminal and execute a
+command (specified by its arguments) as a background daemon. In common with
+the original, it has options to change to the root directory before
+starting, to lock, write and remove a pidfile on behalf of the command, to
+restart the command when it exits, and to drop privileges to a different
+user and group before execution. This version can also start a logger
+process to send output to syslog and uses inotify to implement simple
+dependencies, waiting for specified filesystem paths to be created before
+starting the command. (Typically this is used with pidfiles or unix sockets
+in /run.)
+
+
+init
+----
+
+Previous versions of this collection provided a minimal /bin/init, which
+launched an /etc/rc.startup script at boot, reaped orphans while waiting for
+a signal to shut down, then ran an /etc/rc.shutdown script to gracefully
+terminate the system. Finally, /bin/init would call reboot() to halt, reboot
+or power-off depending on the signal that was sent.
+
+However, competent shells will always reap adopted children, so this was
+unnecessarily complicated. It is sufficient to make /etc/init an executable
+script which starts the system exactly as /etc/rc.startup did, sleeps
+awaiting a signal to shutdown, then cleanly terminates the system like
+/etc/rc.startup, finally executing the stop utility below to reboot the
+kernel.
+
+Like the old /bin/init, an /etc/init script could sleep awaiting a signal,
+or for a more flexible interface, block reading commands from a /dev/initctl
+named pipe.
+
+A demonstration /etc/init is included in the examples/ subdirectory, along
+with an example /etc/fstab showing the required pseudo-filesystems and
+one-line scripts to trigger halt, poweroff and reboot actions.
+
+
+pivot
+-----
+
+This is a replacement for pivot_root from util-linux. Run with two
+arguments as
+
+  pivot NEW-ROOT PUT-OLD
+
+it simply makes a pivot_root() syscall to move the root filesystem of the
+current mount namespace to the directory PUT-OLD and make NEW-ROOT the new
+root filesystem.
+
+However, unlike util-linux pivot_root, it can also be run with a single
+argument NEW-ROOT, omitting PUT-OLD. In this case, it uses a pivot_root()
+call to stack the old and new root filesystems on the same mount point,
+then completely detaches the old root filesystem before returning.
+
+Performing the detach operation atomically in a single command is helpful
+when constructing secure containers from a script. It eliminates the need
+to trust the umount binary within the container.
+
+Despite the extra functionality, pivot is smaller than util-linux pivot_root
+and doesn't defile /bin with an ugly command name containing an underscore.
+
+
+seal
+----
+
+Linux treats /proc/self/exe and /proc/PID/exe in a strange magic way.
+Although stat() sees a symlink to the absolute path of the binary, open()
+accesses the binary itself whether or not the symlink can be resolved in
+the filesystem namespace of the opening process.
+
+Sometimes when sandboxing processes, this can leak a path to a host binary
+from inside an otherwise isolated container. For example, this led to the
+CVE-2019-5736 vulnerability in runC 'privileged containers'.
+
+One robust defence against this is to exec such processes from a sealed
+memfd rather than directly from the host filesystem. The seal utility
+provides an easy way to do this for an arbitrary program. Invoked as
+
+  seal PROG [ARG]...
+
+it locates PROG on the PATH, clones it to a new sealed memfd, then executes
+the memfd with the given arguments using fexecve().
+
+The behaviour of the shell and execvp/execlp is mirrored as closely as
+possible: PROG must be executable and program names containing '/'
+characters are assumed to be a full pathname, bypassing PATH.
+
+
+stop
+----
+
+Since a shell script cannot directly perform the final reboot() system call
+at the end of shutdown, the stop utility is provided to do this. This
+expects a single argument of 'halt', 'kexec', poweroff', 'reboot' or
+'shutdown' to indicate the type of reboot() call required. Run without an
+action argument, stop will list the available actions together with a
+warning about its lack of gracefulness.
+
+
+syslog and syslogd
+------------------
+
+This little system logger daemon takes a different approach to its
+mainstream competitors, more in keeping with the Unix 'toolkit' philosophy.
+
+syslog reads messages as they arrive at /dev/log and /proc/kmsg, printing
+them to stdout in a format chosen for ease of handling in a shell-script
+read loop. For convenience, if syslog is provided with arguments, it will
+run them as a command in a child process and pipe its output to this command
+instead of stdout.
+
+By default, syslog is compiled with -DUTC=1 to select UTC timestamps. Each
+line of output then consists of eight space-separated fields:
+
+  - process ID of the sender, or 0 for a kernel messsage
+  - numeric user ID of the sender, or 0 for a kernel message
+  - numeric group ID of the sender, or 0 for a kernel message
+  - facility name: daemon, kern, authpriv, etc.
+  - numeric log level from 0 (LOG_EMERG) to 7 (LOG_DEBUG)
+  - date in the format YYYY-MM-DD
+  - time in the 24-hour format HH:MM:SS
+  - the log message itself
+
+When compiled with -DUTC=0, local time is used in place of UTC and the zone
+offset in the format +HHMM or -HHMM is included as an extra field between
+the time and the log message. This resolves any ambiguity with times during
+daylight saving changes.
+
+On glibc systems, syslog(3) sends datagrams to /dev/log with dates in the
+time zone of the calling process. On musl systems, these time stamps are
+always UTC. The right behaviour should be chosen automatically but can be
+explicitly configured at compile time with -DUTCLOG=0 or -DUTCLOG=1.
+
+A simple syslogd script which wraps syslog is installed with it.
+
+
+uevent and ueventd
+------------------
+
+The kernel notifies userspace of device creation with uevents sent to
+clients listening on a NETLINK_KOBJECT_UEVENT sockets. As they arrive,
+uevent lists the uevent properties to stdout in a space-separated key/value
+format with a blank line terminating the record. This format is chosen for
+easy of handling in a shell-script read loop.  For convenience, if uevent is
+provided with arguments, it will run them as a command in a child process
+and pipe its output to this command instead of stdout.
+
+An example uevent property list for a newly created disk device is
+
+  ACTION add
+  DEVPATH /devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sda
+  SUBSYSTEM block
+  MAJOR 8
+  MINOR 0
+  DEVNAME sda
+  DEVTYPE disk
+  SEQNUM 5561
+
+DEVPATH is the path within the sysfs mount for the relevant device, and
+DEVNAME (if set) is the path of the kernel-created device node in devtmpfs.
+Network interfaces will instead have an INTERFACE property with their name
+that was allocated by the kernel.
+
+A simple ueventd script to handle uevent output is installed with it, as
+cleaner, more flexible replacement for udev. To use this, define bash
+functions add(), remove(), change(), etc. (matching the uevent ACTION types)
+in /etc/ueventd.conf, which is sourced by the script on start. The event()
+shell function is also called for all events, with the ACTION and DEVPATH in
+its first two arguments.
+
+All of the shell functions defined in /etc/ueventd.conf will be called with
+the uevent environment list (properties) in an associative array ENV
+together with the most commonly accessed properties in the shell variables
+ACTION, DEVNAME, DEVPATH, DRIVER, INTERFACE and SUBSYSTEM. SYSPATH is also
+set to the absolute path of the device directory, i.e. ${SYSFS}${DEVPATH}
+where $SYSFS is typically /sys.
+
+
+Building and installing
+-----------------------
+
+Unpack the source tar.gz file and change to the unpacked directory.
+
+Run 'make', then 'make install' to install the scripts and binaries in /bin.
+Alternatively, you can set DESTDIR and/or BINDIR to install in a different
+location, or strip and copy the compiled binaries and scripts into the
+correct place manually.
+
+Arachsys init was developed on GNU/Linux and is unlikely to be portable to
+other platforms as it uses a number of Linux-specific facilities. Please
+report any problems or bugs to Chris Webb <chris@arachsys.com>.
+
+
+Copying
+-------
+
+Arachsys init was written by Chris Webb <chris@arachsys.com> and is
+distributed as Free Software under the terms of the MIT license in COPYING.

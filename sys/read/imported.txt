@@ -1,0 +1,11 @@
+A List of Unmodified Import Trees
+=================================
+
+  lib/curl: cURL 7.72.0 (https://curl.haxx.se/)
+  lib/libssl: LibreSSL 3.1.4 (https://www.libressl.org/)
+  lib/libz: zlib 1.2.11 (http://zlib.net/)
+  usr.bin/bzip2: bzip2 1.0.8 (https://www.sourceware.org/bzip2/)
+  usr.bin/unzip: InfoUnzip 6.0 (http://infozip.sourceforge.net/)
+  usr.bin/zip: InfoZip 3.0 (http://infozip.sourceforge.net/)
+
+See copyright.txt for more information.

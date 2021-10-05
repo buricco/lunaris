@@ -1,0 +1,52 @@
+From: Aron Xu <aron@debian.org>
+Date: Mon, 5 Nov 2018 17:46:13 +0800
+Subject: Bug#887743: Fix build failures caused by update in glibc
+
+Forwarded: https://github.com/att/ast/pull/63
+Applied-Upstream: https://github.com/att/ast/commit/1647f750138ca167f0348fff08c82301baac8dfc
+Last-Update: 2018-11-09
+Bug-Debian: https://bugs.debian.org/887743
+---
+ src/lib/libast/features/stdio |  2 ++
+ src/lib/libast/include/ast.h  | 12 ++++++++++++
+ 2 files changed, 14 insertions(+)
+
+diff --git a/src/lib/libast/features/stdio b/src/lib/libast/features/stdio
+index b323893..b97c4af 100644
+--- a/src/lib/libast/features/stdio
++++ b/src/lib/libast/features/stdio
+@@ -6,6 +6,8 @@ cat{
+ 	#define _FILE_DEFINED	1
+ 	#define _FILE_defined	1
+ 	#define _FILEDEFED	1
++	#define __FILE_defined	1
++	#define ____FILE_defined	1
+ 
+ 	#ifndef __FILE_TAG
+ 	#define __FILE_TAG	_sfio_s
+diff --git a/src/lib/libast/include/ast.h b/src/lib/libast/include/ast.h
+index d8cc9d3..bcdb47a 100644
+--- a/src/lib/libast/include/ast.h
++++ b/src/lib/libast/include/ast.h
+@@ -58,9 +58,21 @@ struct _sfio_s;
+ #ifndef	__FILE_typedef
+ #define __FILE_typedef	1
+ #endif
++#ifndef _FILE_DEFINED
++#define _FILE_DEFINED   1
++#endif
++#ifndef   _FILE_defined
++#define _FILE_defined   1
++#endif
+ #ifndef _FILEDEFED
+ #define _FILEDEFED	1
+ #endif
++#ifndef __FILE_defined
++#define __FILE_defined  1
++#endif
++#ifndef ____FILE_defined
++#define ____FILE_defined  1
++#endif
+ #endif
+ 
+ /*

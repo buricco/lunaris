@@ -1,0 +1,44 @@
+History As Regards Trademark Justification
+==========================================
+
+  The project was established sometime before January 26, 2007, when the
+  original toolchain (called Fox) was committed to Sourceforge's SVN server
+  for the first time.  I know that I was using the "Lunaris" term as a working 
+  title at the time, although the project was actually being produced under 
+  the name "Kaban".
+  
+  I have records dating July 14, 2013 and August 5, 2013 where I describe a
+  potential project resembling the current project, and use the term "Lunaris"
+  to refer to said project.  Reference to the intention of making it like
+  "Unix" is found on July 14, 2013, along with an explanation of the name; a
+  few hours later, musl is proposed as its C library; clang as its system C
+  compiler, sysvinit (eventually replaced, but the underlying philosophy was
+  maintained) as the init system, and some form of the Korn shell as the
+  system shell, on September 25 of the same year.
+  
+  The name first appears in the documentation for the new version of the
+  toolchain (initially codenamed "tewlz") on July 21, 2020.  This was renamed
+  to "Lunaris Core" on August 3, 2020 (hence, "luncore" appears in the release
+  files as the base of the distribution tree).  As mentioned, "Lunaris" had
+  been established as the name of the project, 
+  
+  Two existing registered trademarks are known to exist as of the time of
+  writing, but neither is in a field remotely related to my project.
+
+The "Official" Trademark Claim
+==============================
+
+  As founder and lead of the project openly called "Lunaris" since 2013 at the
+  latest, and of the "Lunaris Core" project first released to public 
+  availability on July 21, 2020, I hereby declare my trademark claim on the
+  term "Lunaris", so far as it relates to "computer operating system software 
+  to facilitate computer use and operation".
+  
+  I understand that this does not establish Lunaris in this context as a
+  registered trademark.
+  
+  No claims are hereby made on any copyrights or patents that may affect the
+  project.
+  
+  Stephen V. Nickolas
+  August 23, 2020

@@ -1,0 +1,226 @@
+ksh (93u+20120801-3.4+deb10u1) buster; urgency=high
+
+  * Fix for CVE-2019-14868: in ksh version 20120801, a flaw was found
+    in the way it evaluates certain environment variables. An attacker
+    could use this flaw to override or bypass environment restrictions
+    to execute shell commands. Services and applications that allow
+    remote unauthenticated attackers to provide one of those
+    environment variables could allow them to exploit this issue
+    remotely. (Closes: #948989)
+
+ -- Anuradha Weeraman <anuradha@debian.org>  Sun, 12 Jul 2020 11:26:07 -0400
+
+ksh (93u+20120801-3.4) unstable; urgency=medium
+
+  [ Boyuan Yang ]
+  * debian/menu: Replace menu entry with a .desktop file that only shows under Old menu systems
+  * debian/rules: get-orig-source: Add notes about retrieving src
+  * debian/watch: Add a watch file to monitor upstream version
+  * debian/watch: Fix matching
+
+  [ Aron Xu ]
+  * Non-maintainer upload.
+  * Fix FTBFS with glibc >= 2.28 by Juhani Numminen (Closes: #915326)
+
+ -- Aron Xu <aron@debian.org>  Fri, 14 Dec 2018 15:26:58 +0800
+
+ksh (93u+20120801-3.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/control: Update Vcs-* fields and use git repo under Salsa
+    Debian group.
+  * debian/patches: Refresh last patch.
+  * debian/changelog: Remove trailing spaces.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 09 Nov 2018 10:52:17 -0500
+
+ksh (93u+20120801-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix build failures caused by update in glibc (Closes: #887743)
+
+ -- Aron Xu <aron@debian.org>  Mon, 05 Nov 2018 17:46:13 +0800
+
+ksh (93u+20120801-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * fix postinst with merged /usr using patch from mksh (Closes: #810158)
+
+ -- Christoph Martin <martin@uni-mainz.de>  Wed, 31 May 2017 11:57:56 +0200
+
+ksh (93u+20120801-2) unstable; urgency=medium
+
+  * Adopted package (Closes: #691199)
+  * Created alioth git repository and added VCS fields
+  * Removed Conflicts clause versus pdksh as it is no longer relevant
+  * Marked RELEASE file as an upstream changelog rather than simply doc
+  * Added lintian override explaining the absence of a watch file
+  * Added patch to correct spelling errors
+  * Raised standards version to 3.9.6 - no change
+  * Raised compat level and debhelper version to 9
+  * Revamped debian/rules and added hardening and reproducibility
+  * Added binary format support for compiled scripts (Closes: #687343)
+  * Reviewed package description - added note about shcomp
+  * Registered with doc-base and added extra documents
+  * Moved example.kshrc to /etc/skel/.kshrc
+  * Reviewed cleanup-man-title.patch and enabled rksh
+  * Small correction to formatting of man page (Closes: #755486)
+  * Removed deprecated GREP_OPTIONS from example.kshrc
+  * Removed SHLVL increment from example.kshrc as it was doubling increment
+  * Rewrote setenv() in example.kshrc (Closes: #792733)
+  * Reviewed copyright file and added license-reconcile config
+  * Changed default fc editor to ex (Closes: #633524)
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Mon, 02 Nov 2015 15:27:02 +0000
+
+ksh (93u+20120801-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Removed extra files that had leaked into debian tarball, mea culpa
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Tue, 27 Oct 2015 08:06:23 +0000
+
+ksh (93u+20120801-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply patch from bug report to resolve FTBS (Closes: #777930)
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Fri, 16 Oct 2015 07:10:35 +0100
+
+ksh (93u+20120801-1) unstable; urgency=low
+
+  * New upstream release.
+  * Support hardening compiler options.
+  * Bump to Standards-Version 3.9.4.
+  * Includes upstream fix to detect renamed parent directory. (closes: #686149)
+  * cd built-in now properly fixed upstream. (Really Closes: #679966)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Mon, 07 Jan 2013 16:08:49 +0100
+
+ksh (93u+20120628-1) unstable; urgency=high
+
+  * New upstream release (closes: #679966)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 12 Jul 2012 05:41:59 +0200
+
+ksh (93u+-1) unstable; urgency=low
+
+  * Bump to Standards-Version 3.9.3
+  * New upstream release (closes: #636580, #667038)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Sun, 15 Apr 2012 01:28:31 +0200
+
+ksh (93u-1) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Bump to Standards-Version 3.9.1
+  * New upstream release (closes: #600042)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Fri, 25 Mar 2011 11:28:48 +0100
+
+ksh (93t+20100621-1) unstable; urgency=low
+
+  * Bump to Standards-Version 3.9.0
+  * New upstream release
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 08 Jul 2010 11:55:12 +0200
+
+ksh (93t+20100309-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 25 Mar 2010 00:23:35 +0100
+
+ksh (93t+20100301-1) unstable; urgency=low
+
+  * Better detection of utimensat() to fix build on GNU/kFreeBSD
+    from Petr Salinger (closes: #537246)
+  * Bump to Standards-Version 3.8.4
+  * New upstream release
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 04 Mar 2010 11:27:15 +0100
+
+ksh (93t+-2) unstable; urgency=low
+
+  * Fix errors in manpage
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 04 Jun 2009 13:27:46 +0200
+
+ksh (93t+-1) unstable; urgency=low
+
+  * Bump to Standards-Version 3.8.1
+  * Add get-orig-source target to debian/rules
+  * New upstream release (closes: #455824, #526160)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Fri, 15 May 2009 11:54:18 +0200
+
+ksh (93s+20080202-1) unstable; urgency=low
+
+  * Bump to Standards-Version 3.7.3
+  * Fix NAME section of manpage (closes: #463022)
+  * Don't compile binaries with an RPATH
+  * New upstream release (closes: #445992)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Fri, 08 Feb 2008 12:09:24 +0100
+
+ksh (93s+20071105-1) unstable; urgency=low
+
+  * Change menu section to Applications/Shells
+  * New upstream release
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Mon, 19 Nov 2007 12:53:14 +0100
+
+ksh (93s+20070628-1) unstable; urgency=low
+
+  * New upstream release
+  * Enable /etc/ksh.kshrc support (closes: #431206)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Fri, 13 Jul 2007 12:45:26 +0100
+
+ksh (93s+-1) unstable; urgency=low
+
+  * Bump to Standards-Version 3.7.2
+  * New upstream release (closes: #384797)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Mon, 23 Apr 2007 14:49:54 +0200
+
+ksh (93r-1) unstable; urgency=high
+
+  * Fix build failure with bash 3.1 as /bin/sh
+  * New upstream release
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Tue, 07 Feb 2006 19:24:26 +0100
+
+ksh (93q+93r-1) unstable; urgency=high
+
+  * New upstream beta version, fixes gcc 4 problem (closes: #314578)
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Thu, 11 Aug 2005 22:34:14 +0200
+
+ksh (93q-4) unstable; urgency=low
+
+  * Merge fix for problem with function return status.
+  * Bump to Standards-Version 3.6.2.
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Mon, 27 Jun 2005 19:20:35 +0200
+
+ksh (93q-3) unstable; urgency=low
+
+  * Include shcomp binary along with English and French man pages
+    from Christophe Martin (closes: #311789).
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Wed, 15 Jun 2005 22:38:37 +0200
+
+ksh (93q-2) unstable; urgency=low
+
+  * Install /bin/ksh alternative, and conflict with versions of
+    pdksh older than 5.2.14-18 (closes: #304359).
+  * Add example.kshrc file
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Mon, 18 Apr 2005 23:44:06 +0200
+
+ksh (93q-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Oliver Kiddle <okiddle@yahoo.co.uk>  Wed,  9 Feb 2005 22:54:12 +0100

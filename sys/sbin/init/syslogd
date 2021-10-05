@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+# Copyright (C) 2006-2020 Chris Webb.
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+#  * The above copyright notice and this permission notice shall be included 
+#    in all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+DATASYNC=0
+LOGDIR=/var/log
+PIDFILE=/run/syslogd.pid
+RESTART=0
+
+while getopts :d:p:s OPTION; do
+  case $OPTION in
+    d)
+      LOGDIR=$OPTARG
+      ;;
+    p)
+      PIDFILE=$OPTARG
+      ;;
+    s)
+      DATASYNC=1
+      ;;
+  esac
+done
+
+if [[ ${*:$OPTIND} != "-" ]]; then
+  if { exec 3>>"$PIDFILE" && flock -n 3; } 2>/dev/null; then
+    exec daemon syslog "$0" "${@:1:OPTIND - 1}" -
+    rm -f "$PIDFILE"
+  else
+    echo "Failed to lock $PIDFILE; is ${0##*/} already running?" >&2
+  fi
+  exit 1
+fi
+
+trap 'RESTART=0 && exit' SIGTERM
+trap 'RESTART=1 && exit' SIGHUP SIGINT SIGUSR1 SIGUSR2
+trap '(( RESTART )) && exec "$0" "$@" || rm -f "$PIDFILE"' EXIT
+
+echo $PPID >"$PIDFILE"
+exec 3>&-
+
+while read -r PEERPID PEERUID PEERGID FACILITY LEVEL DATE ENTRY; do
+  if (( LEVEL > 6 )); then
+    FACILITY=debug
+  elif [[ $FACILITY == auth* ]]; then
+    FACILITY=auth
+  elif [[ $FACILITY != kern && $FACILITY != mail ]]; then
+    FACILITY=daemon
+  fi
+
+  if [[ ! -d $LOGDIR/$FACILITY ]]; then
+    [[ $FACILITY == debug ]] && continue
+    mkdir -m 0700 -p "$LOGDIR/$FACILITY"
+  fi
+
+  echo "$ENTRY" >>"$LOGDIR/$FACILITY/$DATE"
+  (( DATASYNC )) && sync -d "$LOGDIR/$FACILITY/$DATE"
+done

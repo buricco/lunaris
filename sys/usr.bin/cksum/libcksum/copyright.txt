@@ -1,0 +1,62 @@
+Copyrights and Licenses for cksum
+=================================
+
+There are too many copyrights to sort this into copyright.txt, so it gets its
+own attribution page.  This is going to be a bit messy.  All applicable
+copyright messages can also be found in the source code itself.
+
+----------------------------------------------------------------------------
+"THE BEER-WARE LICENSE" (Revision 42):
+<phk@login.dkuug.dk> wrote this file.  As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
+----------------------------------------------------------------------------
+(The above applies to hashhl.c and mdXhl.c in the libcksum folder.)
+
+Copyright (c) 1990-1992, RSA Data Security, Inc.
+
+License to copy and use this software is granted provided that it is 
+identified as the "RSA Data Security, Inc. MD4 Message-Digest Algorithm" in 
+all material mentioning or referencing this software or this function.
+
+License is also granted to make and use derivative works provided that such 
+works are identified as "derived from the RSA Data Security, Inc. MD4 
+Message-Digest Algorithm" in all material mentioning or referencing the 
+derived work.
+
+License to copy and use this software is granted provided that it is 
+identified as the "RSA Data Security, Inc. MD5 Message-Digest Algorithm" in 
+all material mentioning or referencing this software or this function.
+
+License is also granted to make and use derivative works provided that such 
+works are identified as "derived from the RSA Data Security, Inc. MD5
+Message-Digest Algorithm" in all material mentioning or referencing the 
+derived work.
+
+RSA Data Security, Inc. makes no representations concerning either the 
+merchantability of this software or the suitability of this software for any 
+particular purpose. It is provided "as is" without express or implied warranty 
+of any kind.
+
+These notices must be retained in any copies of any part of this documentation 
+and/or software.
+
+Copyright (c) 2001 Markus Friedl.  All rights reserved.
+Copyright (c) 2001 The NetBSD Foundation, Inc.  All rights reserved.
+   See "2-BSD" licenses in read/copyright.txt for license terms.
+
+
+Copyright 2000 Aaron D. Gifford.  All rights reserved.  
+Copyright (c) 1991, 1993 The Regents of the University of California.
+   All rights reserved.
+Copyright (c) 1997 Jason R. Thorpe.  All rights reserved.
+   See "3-BSD" licenses in read/copyright.txt for license terms.
+
+md2.c, md2.h, md4.c, rmd160.c, sha1.c, sha256.c, sha384.c, sha512.c: 
+   No copyright attribution.
+   Assumed copyright 2001, 2006, 2016 by The NetBSD Foundation, Inc. 
+   See "2-BSD" licenses in read/copyright.txt for license terms.
+
+sha1.c, sha1.h: Dedicated into the public domain by Steve Reid.
+md2hl.c, md4hl.c, md5hl.c, rm160hl.c, sha1hl.c, sha224hl.c, sha256hl.c, 
+   sha384hl.c, sha512hl.c: Dedicated into the public domain by Jason R. Thorpe.
